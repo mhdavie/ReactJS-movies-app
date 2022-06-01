@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { Container, MovieList, Movie } from "./style"
-import { API_KEY } from '../../config/key'
+// import { API_KEY } from '../../config/key'
 import { useState } from 'react'
+
 
 
 
@@ -21,7 +22,8 @@ function Home() {
 
     return (
         <Container>
-            <h1> Pop-Movie</h1>
+
+            <h1> Pop-Movies</h1>
             
             <MovieList>
 
