@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, MovieList, Movie } from "./style"
 // import { API_KEY } from '../../config/key'
 import { useState } from 'react'
@@ -31,11 +32,16 @@ function Home() {
                     return (
                         <Movie key= {movie.id}>
                     
-                            <a href="http://google.com"> <img src={`${image_path}${movie.poster_path}`} alt={movie.title}/></a>
-                            <span>{movie.title}</span>
+                                <Link to={`/details/${movie.id}`}>
+                                    
+                                    <img src={`${image_path}${movie.poster_path}`} alt={movie.title}/>
+                                
+                                </Link> 
+
+                                <span>{movie.title}</span>
 
                         </Movie>            
-                )                    
+                    )                    
 
                 })}
 
