@@ -1,27 +1,44 @@
 import React from 'react';
-import {Container} from "./style"
+import {Container, MovieList, Movie} from "./style"
 
 function Home() {
+    const movies = [
+
+        {
+            title: "Spider Man",
+            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
+        },
+        
+        {
+            title: "Batman",
+            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
+        },
+        
+        {
+            title: "IronMan",
+            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
+        }
+    ]
+
     return (
         <Container>
             <h1> Pop-Movie</h1>
-            <ul>
-                <li>
-                
-                    <img src="https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large" alt="spy"/>
-                    <span>Spider Man</span>
-                </li>
+            <MovieList>
 
-                <li>
-                    <img src="https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large" alt="spy"/>
-                    <span>Spider Man</span>
-                </li>
+                {movies.map(movie => {
+                    return (
+                        <Movie>
+                    
+                            <a href="http://google.com"> <img src={movie.image_url} alt={movie.title}/></a>
+                            <span>{movie.title}</span>
 
-                <li>
-                    <img src="https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large" alt="spy"/>
-                    <span>Spider Man</span>
-                </li>
-            </ul>
+                        </Movie>            
+                )                    
+
+                })}
+
+
+            </MovieList>
 
         </Container>
     );
