@@ -1,78 +1,14 @@
 import React from 'react';
-import {Container, MovieList, Movie} from "./style"
+import { Container, MovieList, Movie } from "./style"
+import { API_KEY } from '../../config/key'
+import { UseState } from 'react'
+
+
+
 
 function Home() {
-    const movies = [
 
-        {
-            id:1,
-            title: "Spider Man",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:2,
-            title: "Batman",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:3,
-            title: "IronMan",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        {
-            id:1,
-            title: "Spider Man",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:2,
-            title: "Batman",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:3,
-            title: "IronMan",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        {
-            id:1,
-            title: "Spider Man",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:2,
-            title: "Batman",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:3,
-            title: "IronMan",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        {
-            id:1,
-            title: "Spider Man",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:2,
-            title: "Batman",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        },
-        
-        {
-            id:3,
-            title: "IronMan",
-            image_url: "https://pbs.twimg.com/media/FR7DvJFVIAAuoH6?format=jpg&name=large"
-        }
-    ]
+    const [movies, setMovies] = UseState([])
 
     return (
         <Container>
