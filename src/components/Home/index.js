@@ -11,7 +11,7 @@ import { useState } from 'react'
 function Home() {
 
     const [movies, setMovies] = useState([])
-    const image_path = 'https://image.tmdb.org/t/p/w500/'
+    const imagePath = 'https://image.tmdb.org/t/p/w500/'
 
     useEffect(() => {
         //consumir o filme...
@@ -34,7 +34,7 @@ function Home() {
                     
                                 <Link to={`/details/${movie.id}`}>
                                     
-                                    <img src={`${image_path}${movie.poster_path}`} alt={movie.title}/>
+                                    <img src={`${imagePath}${movie.poster_path}`} alt={movie.title}/>
                                 
                                 </Link> 
 
