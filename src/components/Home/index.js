@@ -9,6 +9,7 @@ import { useState } from 'react'
 function Home() {
 
     const [movies, setMovies] = useState([])
+    const image_path = 'https://image.tmdb.org/t/p/w500/'
 
     useEffect(() => {
         //consumir o filme...
@@ -28,7 +29,7 @@ function Home() {
                     return (
                         <Movie key= {movie.id}>
                     
-                            <a href="http://google.com"> <img src={movie.image_url} alt={movie.title}/></a>
+                            <a href="http://google.com"> <img src={`${image_path}${movie.poster_path}`} alt={movie.title}/></a>
                             <span>{movie.title}</span>
 
                         </Movie>            
