@@ -1,4 +1,4 @@
-##React-Js Pop Movies App
+## React-Js Pop Movies App
 
 ## Description 
 
